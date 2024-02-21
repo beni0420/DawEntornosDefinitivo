@@ -10,18 +10,19 @@ public class Main {
         saldoActual = Cuenta1.estado();
         System.out.println("El saldo actual es"+ saldoActual );
 
-        operativa_cuenta(Cuenta1);
+        float cantidad = 100; // Ejemplo de cantidad a utilizar
+        operativa_cuenta(Cuenta1, cantidad);
     }
 
-    public static void operativa_cuenta(CCuenta cuenta) {
+    public static void operativa_cuenta(CCuenta cuenta, float cantidad) {
         try {
-            cuenta.retirar(2300);
+            cuenta.retirar(cantidad); // Utilizamos la cantidad proporcionada como parámetro
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
         }
         try {
             System.out.println("Ingreso en cuenta");
-            cuenta.ingresar(695);
+            cuenta.ingresar(cantidad); // Utilizamos la cantidad proporcionada como parámetro
         } catch (Exception e) {
             System.out.print("Fallo al ingresar");
         }
