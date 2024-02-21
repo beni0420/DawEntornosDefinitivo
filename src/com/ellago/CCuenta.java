@@ -1,7 +1,7 @@
 package com.ellago;
 
 public class CCuenta {
-
+//akbdksa
     private String nombre;
     private String cuenta;
     private double saldo;
