@@ -1,10 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.ellago;
-
 
 public class Main {
 
@@ -16,14 +10,18 @@ public class Main {
         saldoActual = Cuenta1.estado();
         System.out.println("El saldo actual es"+ saldoActual );
 
+        operativa_cuenta(Cuenta1);
+    }
+
+    public static void operativa_cuenta(CCuenta cuenta) {
         try {
-            Cuenta1.retirar(2300);
+            cuenta.retirar(2300);
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
         }
         try {
             System.out.println("Ingreso en cuenta");
-            Cuenta1.ingresar(695);
+            cuenta.ingresar(695);
         } catch (Exception e) {
             System.out.print("Fallo al ingresar");
         }
